@@ -1,0 +1,34 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\TakeOwnership]
+@="Take Ownership"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"NeverDefault"=""
+
+[HKEY_CLASSES_ROOT\*\shell\TakeOwnership\command]
+@="cmd /c start /min powershell -windowstyle hidden -command \"Start-Process -windowstyle hidden cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant users:F /t /c /q' -Verb runAs\""
+"IsolatedCommand"="cmd /c start /min powershell -windowstyle hidden -command \"Start-Process -windowstyle hidden cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant users:F /t /c /q' -Verb runAs\""
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\TakeOwnership]
+@="Take Ownership"
+"AppliesTo"="NOT (System.ItemPathDisplay:=\"C:\\Users\" OR System.ItemPathDisplay:=\"C:\\ProgramData\" OR System.ItemPathDisplay:=\"C:\\Windows\" OR System.ItemPathDisplay:=\"C:\\Windows\\System32\" OR System.ItemPathDisplay:=\"C:\\Program Files\" OR System.ItemPathDisplay:=\"C:\\Program Files (x86)\")"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"NeverDefault"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\TakeOwnership\command]
+@="cmd /c start /min powershell -windowstyle hidden -command \"Start-Process -windowstyle hidden cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant users:F /t /c /q' -Verb runAs\""
+"IsolatedCommand"="cmd /c start /min powershell -windowstyle hidden -command \"Start-Process -windowstyle hidden cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant users:F /t /c /q' -Verb runAs\""
+
+
+[HKEY_CLASSES_ROOT\Drive\shell\TakeOwnership]
+@="Take Ownership"
+"AppliesTo"="NOT (System.ItemPathDisplay:=\"C:\\\")"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\TakeOwnership\command]
+@="cmd /c start /min powershell -windowstyle hidden -command \"Start-Process -windowstyle hidden cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant users:F /t /c /q' -Verb runAs\""
+"IsolatedCommand"="cmd /c start /min powershell -windowstyle hidden -command \"Start-Process -windowstyle hidden cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant users:F /t /c /q' -Verb runAs\""
