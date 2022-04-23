@@ -103,7 +103,7 @@ function MENU_LOOP() {
     elseif ($CHOICE.trim() -eq 4) { UNINSTALL_WIN_APPS; MENU_LOOP }
     elseif ($CHOICE.trim() -eq 5) { WINUPDATE; MENU_LOOP }
     elseif ($CHOICE.trim() -eq 6) { OPTIMIZATION; MENU_LOOP }
-    elseif ($CHOICE.trim() -eq 7) { &$MAS ; $Host.UI.RawUI.ForegroundColor="Blue"; MENU_LOOP }
+    elseif ($CHOICE.trim() -eq 7) { & ".\res\Tools\WinActivate.exe"; MENU_LOOP }
     elseif ($CHOICE.trim() -eq 8) { OEM_INFO; MENU_LOOP }
     elseif ($CHOICE.trim() -eq 9) { CLEANUP; MENU_LOOP }
     elseif ($CHOICE.trim() -eq 0) { Exit }
